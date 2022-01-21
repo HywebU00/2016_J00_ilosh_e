@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background-image:none; background-color:#FFF}
+#Header, .breadcrumb, .single-item, .accesskey, #FatFooter, #Footer, .Block8, .inmenu, .Block7{ display:none}
+#Incontainer { margin: 0px; background-color: #FFF; box-shadow:none;  overflow: hidden; padding:0 }
+.container{ width:auto}
+.Block_incontent{ padding:20px; background-color:#fff }
+.col-md-9 { width: 100%; }

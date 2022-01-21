@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'Pacifico';
+    src: url('pacifico.eot');
+    src: url('pacifico.eot?#iefix') format('embedded-opentype'), url('pacifico.woff') format('woff'), url('pacifico.ttf') format('truetype'), url('pacifico.svg#Pacifico') format('svg');
+}
+
+/*slick-slide*/
+/*-*/
+.bigbanner {
+    width: 100%;
+}
+
+.bigbanner img {
+    width: 100%;
+    border-radius: 5px
+}
+.no-js .bigbanner div{
+    display: none;
+}
+.no-js .bigbanner div:first-child{
+    display:block;
+}
+.bigbanner .slick-prev:before,
+.bigbanner .slick-next:before {
+   font-size: 0em;
+    line-height: 0em;
+    position: absolute;
+    top: 45%;
+    display: block;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    min-width: auto;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background: url(../images/icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, .5);
+    background-size: 80%
+}
+.bigbanner .slick-next:before {
+   
+    background: url(../images/icon_arrow_right_inverse.png) center center no-repeat RGBA(255, 255, 255, .5);
+     background-size: 80%
+}
+.bigbanner a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.bigbanner a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3px solid #FCC211;
+    display: none;
+}
+.bigbanner a:focus:before{
+	display: block;
+}
+/*-輪播箭頭*/
+.bigbanner .slick-next {
+    right: 15px
+}
+
+.bigbanner .slick-prev {
+    left: 15px
+}
+
+/*-輪播點點*/
+.bigbanner .slick-dots li button:hover:before,
+.bigbanner .slick-dots li button:focus:before {
+    color: #167b9a
+}
+
+.bigbanner .slick-dots li.slick-active button:before {
+    color: #167b9a
+}
+
+.bigbanner .slick-dots {
+    bottom: -38px
+}
+
+@media (max-width: 1199px) {
+    .bigbanner {
+        width: 100%;
+        float: none
+    }
+
+    .bigbanner img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px
+    }
+}
+
+@media (max-width: 991px) {
+    .bigbanner .slick-dots {
+        bottom: -7px
+    }
+}
+.bigbannermore{
+    display: none;
+}
+.no-js .bigbannermore{
+    display:block;
+    clear: both;
+    float: right;
+    margin-top: 10px;
+    
+}
+.bigbannermore a{
+    display: block;
+    padding: 1px 10px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+/*-2*/
+
+.cp_photo {
+    width: 80%;
+    margin: 0px 0 50px 0;
+    padding: 20px 0 40px 0;
+    clear: both;
+}
+
+.cp_photo img {
+    max-width: 100%;
+    max-height: 450px;
+    border-radius: 5px;
+    margin: 0 auto
+}
+.cp_photo a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3px solid #FCC211;
+    display: none;
+}
+.cp_photo a:focus:before{
+    display: block;
+}
+.cp_photo .slick-prev:before,
+.cp_photo .slick-next:before {
+    font-size: 0em;
+    line-height: 0em;
+    position: absolute;
+    top: 45%;
+    display: block;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    min-width: auto;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background: url(../images/icon_arrow_left.png) center center no-repeat rgba(46, 122, 153, .7);
+    background-size: 70%
+}
+.cp_photo .slick-next:before {
+   
+    background: url(../images/icon_arrow_right.png) center center no-repeat rgba(46, 122, 153, .7);
+     background-size: 70%
+}
+
+/*-輪播箭頭*/
+.cp_photo .slick-next {
+    right: -60px
+}
+
+.cp_photo .slick-prev {
+    left: -60px
+}
+
+.cp_photo .slick-prev:before,
+.cp_photo .slick-next:before {
+    color: #34495e
+}
+
+/*-輪播點點*/
+.cp_photo .slick-dots li button:hover:before,
+.cp_photo .slick-dots li button:focus:before {
+    color: #167b9a
+}
+
+.cp_photo .slick-dots li.slick-active button:before {
+    color: #34495e
+}
+
+.cp_photo .slick-dots {
+    bottom: 0px;
+    margin: 0
+}
+
+@media (max-width: 767px) {
+    .cp_photo {
+        width: 100%;
+    }
+
+    .cp_photo .slick-next {
+        right: 40px
+    }
+
+    .cp_photo .slick-prev {
+        left: 20px
+    }
+
+    .cp_photo .slick-prev:before,
+    .cp_photo .slick-next:before {
+        color: #fff
+    }
+
+}
