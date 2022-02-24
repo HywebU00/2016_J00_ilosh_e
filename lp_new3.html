@@ -146,7 +146,6 @@
     </header>
     <!--MainContent start -->
     <section class="MainContent">
-       
         <!--內頁 start -->
         <div class="Block_incontent">
             <div class="container">
@@ -168,7 +167,7 @@
                         <!--左欄資訊 end -->
                     </div>
                     <div class=" col-md-9">
-                       <a class="accesskey" href="#aC" id="aC" accesskey="C" title="Main content">:::</a>
+                        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="Main content">:::</a>
                         <!--右欄資訊 start -->
                         <ol class="breadcrumb">
                             <li><a href="#">Homepage</a></li>
@@ -197,115 +196,118 @@
                                 </ul>
                             </nav>
                             <!--分類 end -->
-                            <!--page start -->
-                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize" onChange="OnPageSizeChange(this)">
-                                        <option value="10" selected>10</option>
-                                        <option value="15">15</option>
-                                        <option value="30">30</option>
-                                        <option value="50">50</option>
-                                        <option value="100">100</option>
-                                    </select> records per page </span>
-                                <ul>
-                                    <li class="first"><a title="第一頁" href="#"></a></li>
-                                    <!--<li class="prevTen"><a title="上10頁" href="#"></a></li>-->
-                                    <li class="prev"><a title="上1頁" href="#"></a></li>
-                                    <li class="here"><a href="#" title="1">1</a></li>
-                                    <li><a href="#" title="2">2</a></li>
-                                    <li><a href="#" title="3">3</a></li>
-                                    <li><a href="#" title="4">4</a></li>
-                                    <li><a href="#" title="5">5</a></li>
-                                    <li class="next"><a title="下1頁" href="#"></a></li>
-                                    <!--<li class="nextTen"><a title="下10頁" href="#"></a></li>-->
-                                    <li class="last"><a title="最後一頁" href="#"></a></li>
-                                </ul>
-                            </section>
-                            <!--page  end -->
-                            <div class="condition"><a href="#">Conditions inquiry</a></div>
-                            <!--listbutton start -->
-                            <div class="listbutton">
-                                <ul>
-                                    <li><a href="#">最新</a></li>
-                                    <li><a href="#">熱門</a></li>
-                                    <li><a href="#">評論</a></li>
-                                </ul>
+                            <!-- 條件區塊 start-->
+                            <div class="condition_block ">
+                                <!-- condition_rightblock start -->
+                                <div class="condition_rightblock">
+                                    <!-- RSS start-->
+                                    <div class="RSSbtn">
+                                        <button type="button" class="btn btn-orange">RSS</button>
+                                    </div>
+                                    <!-- RSS end-->
+                                    <!-- 條件查詢 start -->
+                                    <div class="condition_searchbtn">
+                                        <button type="button" class="btn"><i class="i_search"></i>條件查詢</button>
+                                    </div>
+                                    <!-- 條件查詢 end -->
+                                </div>
+                                <!-- condition_rightblock end -->
                             </div>
-                            <!--listbutton end-->
-                            <!--listTb start -->
-                            <section class="listTb">
-                                <table>
-                                    <thead>
+                            <!-- 條件區塊 end-->
+                            <!-- 條件區塊 start-->
+                            <div class="condition_block2">
+                                <form action="" method="get">
+                                    <table summary="查詢表格">
+                                        <caption> 請輸入查詢條件 </caption>
                                         <tr>
-                                            <th scope="col">Title</th>
-                                            <th width="10%" scope="col">Category</th>
-                                            <th width="13%" scope="col">Department</th>
-                                            <th width="15%" scope="col">Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="#">Amended Labor Standards Act promulgated, increased workers’ creditor rights protection</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Welfare</td>
-                                            <td class="aCenter">104-03-16</td>
+                                            <th scope="row"><label for="htx_stitle">標題</label></th>
+                                            <td><input id="htx_stitle" name="htx_stitle" title="標題" class="text" /></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">The Ministry of Labor (MOL) amended the Enforcement Rules of Labor Union Act on October 8th, 2014.The MOL believes that this amendment enables the Labor Union Act to be more effectively enforced and protects workers’ right to organize, further contributing to the normal functioning of labor unions, and allowing workers to truly enjoy the three basic labor rights.</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Relations</td>
-                                            <td class="aCenter">104-03-04</td>
+                                            <th scope="row"><label for="htx_xbody">內文</label></th>
+                                            <td><input id="htx_xbody" name="htx_xbody" title="內容、本文、網頁、說明" class="text" /></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">Amendment to Article 22 of the Employment Insurance Act</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Insurance</td>
-                                            <td class="aCenter">104-02-25</td>
+                                            <th scope="row"><label for="htx_xurl3">業務單位</label></th>
+                                            <td><select id="selectSample" name="">
+                                                    <option value="">請選擇業務單位</option>
+                                                    <option value="資訊處">資訊處</option>
+                                                    <option value="統計處">統計處</option>
+                                                    <option value="新聞聯絡室">新聞聯絡室</option>
+                                                    <option value="人事處">人事處</option>
+                                                    <option value="勞動保險司">勞動保險司</option>
+                                                    <option value="勞動條件及就業平等司">勞動條件及就業平等司</option>
+                                                    <option value="勞動福祉退休司">勞動福祉退休司</option>
+                                                    <option value="勞動關係司">勞動關係司</option>
+                                                    <option value="會計處">會計處</option>
+                                                    <option value="綜合規劃司">綜合規劃司</option>
+                                                    <option value="勞動法務司">勞動法務司</option>
+                                                    <option value="政風處">政風處</option>
+                                                    <option value="秘書處">秘書處</option>
+                                                    <option value="勞動及職業安全衛生研究所">勞動及職業安全衛生研究所</option>
+                                                    <option value="職業安全衛生署">職業安全衛生署</option>
+                                                    <option value="勞工保險局">勞工保險局</option>
+                                                    <option value="勞動基金運用局">勞動基金運用局</option>
+                                                    <option value="勞動力發展署">勞動力發展署</option>
+                                                    <option value="北基宜花金馬分署">北基宜花金馬分署</option>
+                                                    <option value="桃竹苗分署">桃竹苗分署</option>
+                                                    <option value="中彰投分署">中彰投分署</option>
+                                                    <option value="雲嘉南分署">雲嘉南分署</option>
+                                                    <option value="高屏澎東分署">高屏澎東分署</option>
+                                                    <option value="技能檢定中心">技能檢定中</option>
+                                                </select></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">The period for “paternity leave” extended to the 15 days before and after childbirth, bringing more balance to work and life for employees.</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Welfare</td>
-                                            <td class="aCenter">104-03-16</td>
+                                            <th scope="row"><label for="htx_xpostDateS">發布日期</label></th>
+                                            <td><input type="text" id="htx_xpostDateS" name="htx_xpostDateS" size="10" readonly title="發布日期" tabindex="" class="text2" />
+                                                <button id="btnShowhtx_xpostDateS" onclick="javascript:document.getElementById('htx_xpostDateS').value='';" onkeypress="javascript:document.getElementById('htx_xpostDateS').value='';">清除</button>
+                                                <script type="text/javascript">
+                                                Calendar.setup({ inputField: "htx_xpostDateS", ifFormat: "%Y/%m/%d" });
+                                                </script>
+                                                <noscript> 自動清除預設值，如不執行不影響您資料瀏覽 </noscript> ～ <input id="htx_xpostDateE" name="htx_xpostDateE" size="10" readonly type="text" title="張貼日迄" tabindex="1" class="text2" />
+                                                <button id="btnShowhtx_xpostDateS" onclick="javascript:document.getElementById('htx_xpostDateE').value='';" onKeyPress="javascript:document.getElementById('htx_xpostDateE').value='';">清除</button>
+                                                <script type="text/javascript">
+                                                Calendar.setup({ inputField: "htx_xpostDateE", ifFormat: "%Y/%m/%d" });
+                                                </script>
+                                                <noscript> 自動清除預設值，如不執行不影響您資料瀏覽 </noscript>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">Better wage guarantee during maternity leave as the Ministry of Labor stipulates payment standard shall not be lower than average wage.</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Relations</td>
-                                            <td class="aCenter">104-03-04</td>
+                                            <th scope="row"><label for="htx_xurl3">分類</label></th>
+                                            <td><select id="selectSample" name="">
+                                                    <option value="">全部</option>
+                                                    <option value="勞動條件">勞動條件</option>
+                                                    <option value="勞資關係">勞資關係</option>
+                                                    <option value="福祉退休">福祉退休</option>
+                                                    <option value="勞動保險">勞動保險</option>
+                                                    <option value="勞動力運用與發展">勞動力運用與發展</option>
+                                                    <option value="勞動檢查與安全衛生">勞動檢查與安全衛生</option>
+                                                    <option value="勞動基金">勞動基金</option>
+                                                    <option value="勞動統計">勞動統計</option>
+                                                </select></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">Day off for laborers with voting rights during the civil servant election this year (2014)</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Insurance</td>
-                                            <td class="aCenter">104-02-25</td>
+                                            <th scope="row"><label for="htx_xurl3">排序類型</label></th>
+                                            <td><select id="selectSample" name="">
+                                                    <option value="publishDate">依發布日期排序</option>
+                                                    <option value="chick">依點閱人次排序</option>
+                                                </select></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">The “Labor Standards Act” to become applicable to contract employees (not including teachers only engaged in teaching activities) of private schools on August 1st</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Welfare</td>
-                                            <td class="aCenter">104-03-16</td>
+                                            <th scope="row"><label for="htx_xurl3">排序規則</label></th>
+                                            <td><select id="selectSample" name="">
+                                                    <option value="0">降冪</option>
+                                                    <option value="1">升冪</option>
+                                                </select></td>
                                         </tr>
-                                        <tr>
-                                            <td><a href="#">Ministry of Labor Announces 2014 9th National HRD InnoPrize Winners</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Relations</td>
-                                            <td class="aCenter">104-03-04</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">To promote self learning and lifelong learning and to promote learning on the Labor e-Learning website, this ministry plans to conduct a marketing campaign, Labor e-Learning Website Divination for the Years of the Horse and the Goat, from October 1 to October 20, 2014. For more information, please refer to Labor e-Learning website at http://labor-elearning.mol.gov.tw/.</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Insurance</td>
-                                            <td class="aCenter">104-02-25</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Labor Minister Chen Hsiung-wen Takes Office August 22 to Better Labor Policies.</a></td>
-                                            <td class="aCenter">News</td>
-                                            <td>Department of Labor Insurance</td>
-                                            <td class="aCenter">104-02-25</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </section>
-                            <!--listTb  end -->
+                                    </table>
+                                    <div class="formBtn">
+                                        <input type="submit" name="send" value="查詢" class="btn2" />
+                                        <input type="reset" name="reset" value="清除" class="btn2" />
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- 條件區塊 end-->
                             <!--page start -->
                             <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize" onChange="OnPageSizeChange(this)">
                                         <option value="10" selected>10</option>
@@ -329,7 +331,114 @@
                                 </ul>
                             </section>
                             <!--page  end -->
-                            
+                             <!-- item_listblock start-->
+                            <div class="item_listblock">
+                                <!-- 1 -->
+                                <div class="item_list2">
+                                    <!-- <div class="date">2020-12-20</div> -->
+                                    <h3><a href="#">勞動部勞工保險局109年11月相關統計</a></h3>
+                                    <div class="data">
+                                        <span>發布日期：2020-12-20</span><span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：2153</span>
+                                    </div>
+                                </div>
+                                <!-- 2 -->
+                                <div class="item_list2">
+                                    <!-- <div class="date">2020-12-20</div> -->
+                                    <h3><a href="#">參與國際技能競賽(行政院) </a></h3>
+                                    <div class="data">
+                                        <span>發布日期：2020-12-20</span><span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：13540</span>
+                                    </div>
+                                </div>
+                                <!-- 3 -->
+                                <div class="item_list2">
+                                    <!-- <div class="date">2020-12-20</div> -->
+                                    <h3><a href="#">勞動部委託典通股份有限公司於110年1月11日～1月29日辦理「110年第1次人力需求調查」，敬請受勞動部委託典通股份有限公司 </a></h3>
+                                    <div class="data">
+                                        <span>發布日期：2020-12-20</span><span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：4650</span>
+                                    </div>
+                                </div>
+                                <!-- 4 -->
+                                <div class="item_list2">
+                                    <div class="date">2020-12-20</div>
+                                    <h3><a href="#">公告指定中華鍋爐協會、社團法人中華產業機械設備協會、中華民國工業安全衛生協會等3家非營利法公告指定中華鍋爐協會 </a></h3>
+                                    <div class="data">
+                                        <span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：1564</span>
+                                    </div>
+                                </div>
+                                <!-- 5 -->
+                                <div class="item_list2">
+                                    <div class="date">2020-12-20</div>
+                                    <h3><a href="#">勞保局109年12月核付之勞保年金，已於109年12月30日匯入申請人帳戶。 </a></h3>
+                                    <div class="data">
+                                        <span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：46516</span>
+                                    </div>
+                                </div>
+                                <!-- 6 -->
+                                <div class="item_list2">
+                                    <div class="date">2020-12-20</div>
+                                    <h3><a href="#">勞動部勞工保險局109年11月相關統計</a></h3>
+                                    <div class="data">
+                                        <span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：46516</span>
+                                    </div>
+                                </div>
+                                <!-- 7 -->
+                                <div class="item_list2">
+                                    <div class="date">2020-12-20</div>
+                                    <h3><a href="#">參與國際技能競賽(行政院) </a></h3>
+                                    <div class="data">
+                                        <span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：46516</span>
+                                    </div>
+                                </div>
+                                <!-- 8 -->
+                                <div class="item_list2">
+                                    <div class="date">2020-12-20</div>
+                                    <h3><a href="#">勞動部委託典通股份有限公司於110年1月11日～1月29日辦理「110年第1次人力需求調查」，敬請受勞動部委託典通股份有限公司 </a></h3>
+                                    <div class="data">
+                                        <span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：46516</span>
+                                    </div>
+                                </div>
+                                <!-- 9 -->
+                                <div class="item_list2">
+                                    <div class="date">2020-12-20</div>
+                                    <h3><a href="#">公告指定中華鍋爐協會、社團法人中華產業機械設備協會、中華民國工業安全衛生協會等3家非營利法公告指定中華鍋爐協會 </a></h3>
+                                    <div class="data">
+                                        <span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：46516</span>
+                                    </div>
+                                </div>
+                                <!-- 10 -->
+                                <div class="item_list2">
+                                    <div class="date">2020-12-20</div>
+                                    <h3><a href="#">勞保局109年12月核付之勞保年金，已於109年12月30日匯入申請人帳戶。 </a></h3>
+                                    <div class="data">
+                                        <span>發布單位：新聞聯絡室</span><span>更新日期：2020-12-20</span><span>點閱人數：46516</span>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <!-- item_listblock end-->
+                            <!--page start -->
+                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize" onChange="OnPageSizeChange(this)">
+                                        <option value="10" selected>10</option>
+                                        <option value="15">15</option>
+                                        <option value="30">30</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select> records per page </span>
+                                <ul>
+                                    <li class="first"><a title="第一頁" href="#"></a></li>
+                                    <!--<li class="prevTen"><a title="上10頁" href="#"></a></li>-->
+                                    <li class="prev"><a title="上1頁" href="#"></a></li>
+                                    <li class="here"><a href="#" title="1">1</a></li>
+                                    <li><a href="#" title="2">2</a></li>
+                                    <li><a href="#" title="3">3</a></li>
+                                    <li><a href="#" title="4">4</a></li>
+                                    <li><a href="#" title="5">5</a></li>
+                                    <li class="next"><a title="下1頁" href="#"></a></li>
+                                    <!--<li class="nextTen"><a title="下10頁" href="#"></a></li>-->
+                                    <li class="last"><a title="最後一頁" href="#"></a></li>
+                                </ul>
+                            </section>
+                            <!--page  end -->
                             <div class="quickLink">
                                 <ul>
                                     <li><a href="javascript:history.back();" class="back">Back</a>
@@ -352,7 +461,7 @@
                     <div class="col-md-12 ">
                         <!--FatFooter -->
                         <div id="FatFooter">
-                             <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+                            <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
                             <nav>
                                 <ul>
                                     <li><a href="javascript:;">About ILOSH</a>
@@ -382,7 +491,6 @@
             </div>
         </div>
         <!--第七組 fatfoot end-->
-        
     </section>
     <!--MainContent end -->
     <!--Footer start -->

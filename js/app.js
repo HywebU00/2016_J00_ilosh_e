@@ -117,3 +117,135 @@ $(document).on('keydown', function(e) {
         $('#Footer').find('.accesskey').focus();
     }
 });
+
+
+$(function(){
+    // 條件查詢
+    $('.condition_searchbtn').click(function() {
+        $('.condition_block2').stop().slideToggle();
+    })
+})
+
+$(function() {
+    /*-----------------------------------*/
+    ////////////////多組Tab////////////////
+    /*-----------------------------------*/
+    var _window = $(window),
+        ww = _window.outerWidth(),
+        wh = _window.height(),
+        _body = $("body"),
+        wwNormal = 1400,
+        wwMedium = 992,
+        wwSmall = 768,
+        wwxs = 576;
+    var tab_headerHeight = Math.floor($('.header').outerHeight(true));
+    var resizeTimer1;
+    _window.resize(function() {
+        clearTimeout(resizeTimer1);
+        resizeTimer1 = setTimeout(function() {
+            ww = _window.outerWidth();
+            tabSet();
+        }, 50);
+    });
+
+    function tabSet() {
+        $('.tabs').each(function() {
+            var _tab = $(this),
+                _tabItem = _tab.find('.tabItem'),
+                // _tabItemA = _tabItem.children('a'), //改button後，這行沒有
+                _tabContent = _tab.find('.tabContent'),
+                tabwidth = _tab.width(),
+                tabItemHeight = _tabItem.outerHeight(),
+                tabContentHeight = _tab.find('.active').next().innerHeight(),
+                tiGap =8,
+                tabItemLength = _tabItem.length, //有幾個頁籤
+                tabItemRows = parseInt(tabItemLength / 3); //頁籤有幾行
+            if (tabItemLength % 3 != 0) {
+                tabItemRows = tabItemRows + 1;
+            }; //判斷頁籤一行３個的時後有沒有整除，若不等於０，tabItemRows 就要加＋１
+            var tabItemHeight = _tabItem.outerHeight(true) * tabItemRows, //頁籤的總高度
+                tabItemWidth;
+            _tab.find('.active').next('.tabContent').show();
+            if (ww >= wwSmall) {
+                _tabContent.css('top', tabItemHeight);
+                _tab.height(tabContentHeight + tabItemHeight);
+                tabItemWidth = parseInt((tabwidth - 3 * tiGap) / 3); //每個頁籤的寬度
+                _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+                // _tabItem.first().css('margin-left', 0);
+                // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+            } else {
+                _tab.css('height', 'auto');
+                _tabItem.width(tabwidth);
+                _tabItem.css('margin-left', 0);
+            }
+            _tabItem.focus(tabs); //改button後，前面改_tabItem
+            _tabItem.click(tabs); //改button後，前面改_tabItem
+            function tabs(e) {
+                var _tabItemNow = $(this), //改button後，原來$(this).parent(),改$(this)
+                    tvp = _tab.offset().top,
+                    tabIndex = _tabItemNow.index() / 2,
+                    scollDistance = tvp + tabItemHeight * tabIndex - tab_headerHeight;
+                _tabItem.removeClass('active');
+                _tabItemNow.addClass('active');
+                if (ww <= wwSmall) {
+                    _tabItem.not('.active').next().slideUp();
+                    _tabItemNow.next().slideDown();
+                    $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+                } else {
+                    _tabItem.not('.active').next().hide();
+                    _tabItemNow.next().show();
+                    tabContentHeight = _tabItemNow.next().innerHeight();
+                    _tab.height(tabContentHeight + tabItemHeight);
+                }
+                e.preventDefault();
+            }
+        });
+    }
+    $('.tabs>.tabItem:first-child>a').trigger('click');
+    tabSet();
+})
+$(function() {
+    // 我要發問
+    var _ask_questions = $('.ask_questions').children('button');
+    _ask_questions.click(function() {
+        _ask_questions.siblings('.questions_block').stop().slideToggle();
+    })
+    _ask_questions.siblings('.questions_block').find('.close').click(function() {
+        _ask_questions.siblings('.questions_block').stop().slideUp();
+    })
+    _ask_questions.keyup(function() {
+        _ask_questions.siblings('.questions_block').slideDown();
+    })
+    $('.questions_block').find('li:last>a').focusout(function() {
+        $('.questions_block').stop().slideUp();
+    });
+    // 收合
+    $(".accordion_grounp .accordionblock").each(function() {
+        var _accordionItem3 = $(this).children(".Q").children('a');
+        var _word = _accordionItem3.children('.word');
+        var _ullist = $(this).children('.answer').find('.answer_list');
+        if (_ullist.length == 0) {
+            _word.hide();
+        } else {
+            function accordion3(e) {
+                if (_ullist.is(':visible')) {
+                    _ullist.slideUp();
+                    _word.text('展開').addClass('close');
+                } else {
+                    _ullist.slideDown();
+                    _word.text('收合').removeClass('close');
+                }
+            }
+            _accordionItem3.click(accordion3);
+            // _accordionItem3.keyup(accordion3);
+        }
+    });
+
+    // 點外面關閉
+    $(document).on('touchend click', function(e) {
+        var container = $(" .ask_questions .btn, .ask_questions .questions_block");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $(' .ask_questions .questions_block').slideUp();
+        }
+    });
+})

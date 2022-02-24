@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="">
 
 <head>
     <meta charset="utf-8">
@@ -38,7 +38,7 @@
     <script type="text/javascript" src="js/styleswitcher.js"></script><!-- 切換大、中、小字形-->
 </head>
 
-<body><a class="goCenter" href="#center" tabindex="1">Press Enter to Main Content</a>
+<body>
     <header id="Header">
         <nav class="navbar navbar-default megamenu" role="navigation">
             <div class="container Topheader">
@@ -50,7 +50,7 @@
                 <div class="collapse navbar-collapse" id="offcanvas-right" role="navigation">
                     <div class="pull-sm-right pull-md-right pull-lg-right">
                         <ul class="nav navbar-nav Topnav">
-                            <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                            <a href="javascript:;" title="導覽列" class="accesskey" accesskey="U">:::</a>
                             <li><a href="javascript:;">Home</a></li>
                             <li><a href="javascript:;">Sitemap</a></li>
                             <li><a href="javascript:;">Bilingual</a></li>
@@ -89,10 +89,9 @@
                         <div class="Search">
                             <form class="navbar-form pull-sm-right pull-md-right pull-lg-right" role="search">
                                 <div class="input-group">
-                                    <label for="">帳號:</label>
                                     <input type="text" class="form-control" placeholder="Please Key In Keywords" accesskey="S">
                                     <span class="input-group-btn">
-                                        <input type="button" name="" alt="查詢" class="btn">
+                                        <button type="button" class="btn btn-default"> <span class="glyphicon glyphicon-search"> </span></button>
                                     </span> </div>
                                 <div class="AdvSearch"><a href="javascript:;">Advanced Search</a></div>
                             </form>
@@ -136,7 +135,6 @@
     </header>
     <!--MainContent start -->
     <section class="MainContent">
-        
         <!--內頁 start -->
         <div class="Block_incontent">
             <div class="container">
@@ -158,48 +156,144 @@
                         <!--左欄資訊 end -->
                     </div>
                     <div class=" col-md-9">
-                       <a class="accesskey" href="#aC" id="aC" accesskey="C" title="Main content">:::</a>
                         <!--右欄資訊 start -->
+                        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="Main content">:::</a>
                         <ol class="breadcrumb">
                             <li><a href="#">Homepage</a></li>
                             <li><a href="#">News Center </a></li>
                             <li class="active">News</li>
                         </ol>
-                        <!--cp start -->
-                        <section class="cp">
-                            <h2>第一本相簿</h2>
-                            <section class="share">
-                                <div class="title">分享</div>
-                                <ul>
-                                    <li><a href="#"><img src="images/share_f.gif" alt="Facebook"></a></li>
-                                    <li><a href="#"><img src="images/share_g.gif" alt="google"></a></li>
-                                    <li><a href="#"><img src="images/share_t.gif" alt="Twitter"></a></li>
-                                    <li><a href="#"><img src="images/share_p.gif" alt="Plus 1"></a></li>
-                                </ul>
-                            </section>
-                            <section class="function">
-                                <ul>
-                                    <li><a class="print" href="#">Print</a></li>
-                                    <li><a class="forward" href="#">Forward</a></li>
-                                    <li><a class="back" href="javascript:history.back();">Back</a></li>
-                                </ul>
-                            </section>
-                            <article>
-                                <div class="cp_photo">
-                                    <div><a href="javascript:;"><img src="images/02.jpg" alt=""></a></div>
-                                    <div><a href="javascript:;"><img src="images/01.jpg" alt=""></a></div>
-                                    <div><a href="javascript:;"><img src="images/09.jpg" alt=""></a></div>
-                                </div>
-                                <p>經濟發展和勞工福祉相互依存，政府將致力增進勞資雙方溝通、對話與互動，就共同關注議題凝聚共識，建立合作夥伴之關係，使勞動市場能保有彈性，也能兼顧勞工權益保護，以達勞資自決、勞資雙贏。經濟發展和勞工福祉相互依存，政府將致力增進勞資雙方溝通、對話與互動，就共同關注議題凝聚共識，建立合作夥伴之關係，使勞動市場能保有彈性，也能兼顧勞工權益保護，以達勞資自決、勞資雙贏。</p>
-                                <section class="pubInfo">
+                        <!--np start -->
+                        <section class="np">
+                            <h2>NEWS</h2>
+                            <section class="public_information_group">
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic01.jpg" alt="">
+                                        <div class="explain"><span>本部簡介</span></div>
+                                    </div>
                                     <ul>
-                                        <li>資料來源：<em>秘書室</em></li>
-                                        <li>最後異動時間：<em>2012-02-22 15:41:28</em></li>
-                                        <li>點閱次數：<em>192,643</em></li>
+                                        <li><a href="#">本部簡介</a></li>
                                     </ul>
-                                </section>
-                            </article>
-                            
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic02.jpg" alt="">
+                                        <div class="explain"><span>預算、決算書及會計月報</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">預算執行</a></li>
+                                        <li><a href="#">預算概況</a></li>
+                                        <li><a href="#">會計月報</a></li>
+                                        <li><a href="#">嚴重特殊傳染性肺炎防治及紓困振興特別預算</a></li>
+                                    </ul>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic03.jpg" alt="">
+                                        <div class="explain"><span>保有及管理個人資料</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">保有及管理個人資料</a></li>
+                                    </ul>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic04.jpg" alt="">
+                                        <div class="explain"><span>出國報告</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">出國報告</a></li>
+                                    </ul>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic05.jpg" alt="">
+                                        <div class="explain"><span>研究報告</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">研究報告</a></li>
+                                    </ul>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic06.jpg" alt="">
+                                        <div class="explain"><span>部分時間工作勞工權益</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">僱用部分時間工作勞工應行注意事項</a></li>
+                                        <li><a href="#">部分時間工作勞工勞動契約參考範本</a></li>
+                                    </ul>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic07.jpg" alt="">
+                                        <div class="explain"><span>違反勞動法令公布專區</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">違反勞動法令事業單位（雇主）查詢系統</a></li>
+                                        <li><a href="#">各縣市違反勞動基準法事業單位一覽表</a></li>
+                                        <li><a href="#">違反勞動基準法罰鍰案件處理要點</a></li>
+                                    </ul>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic08.jpg" alt="">
+                                        <div class="explain"><span>童工、母性保護、技術生</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">童工相關保護</a></li>
+                                        <li><a href="#">技術生相關函釋</a></li>
+                                        <li><a href="#">母性保護解釋令</a></li>
+                                        <li><a href="#">技術生相關函釋</a></li>
+                                        <li><a href="#">母性保護解釋令</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">+ 更多</a></div>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic09.jpg" alt="">
+                                        <div class="explain"><span>工讀生權益</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">勞動條件方面的權利</a></li>
+                                        <li><a href="#">職工福利方面的權利</a></li>
+                                        <li><a href="#">勞工保險方面的權利</a></li>
+                                        <li><a href="#">安全衛生方面的權利</a></li>
+                                        <li><a href="#">工讀生的義務</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">+ 更多</a></div>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic10.jpg" alt="">
+                                        <div class="explain"><span>職業災害與補償（助）</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">通勤災害</a></li>
+                                        <li><a href="#">職業災害</a></li>
+                                        <li><a href="#">勞動基準法雇主補償責任</a></li>
+                                        <li><a href="#">職業災害保險</a></li>
+                                        <li><a href="#">職業災害勞工保護權益</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">+ 更多</a></div>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic11.jpg" alt="">
+                                        <div class="explain"><span>勞動派遣</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">勞動派遣權益指導原則</a></li>
+                                        <li><a href="#">派遣勞動上限規範</a></li>
+                                        <li><a href="#">派遣懶人包</a></li>
+                                        <li><a href="#">行政院運用勞動派遣應行注意事項</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">+ 更多</a></div>
+                                </div>
+                                <div class="information_list ">
+                                    <div class="images"><img src="images/information_pic12.jpg" alt="">
+                                        <div class="explain"><span>勞資會議</span></div>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">勞資會議流程圖</a></li>
+                                        <li><a href="#">勞資會議說明手冊</a></li>
+                                        <li><a href="#">勞資會議相關知識</a></li>
+                                        <li><a href="#">勞資會議參考格式</a></li>
+                                        <li><a href="#">上市櫃審查調整檢附勞資會議紀錄相關文件</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">+ 更多</a></div>
+                                </div>
+                            </section>
                             <div class="quickLink">
                                 <ul>
                                     <li><a href="javascript:history.back();" class="back">Back</a>
@@ -208,7 +302,7 @@
                                 </ul>
                             </div>
                         </section>
-                        <!--cp end -->
+                        <!--np end -->
                         <!--右欄資訊 end -->
                     </div>
                 </div>
@@ -222,7 +316,7 @@
                     <div class="col-md-12 ">
                         <!--FatFooter -->
                         <div id="FatFooter">
-                             <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+                            <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
                             <nav>
                                 <ul>
                                     <li><a href="javascript:;">About ILOSH</a>
@@ -252,7 +346,6 @@
             </div>
         </div>
         <!--第七組 fatfoot end-->
-        
     </section>
     <!--MainContent end -->
     <!--Footer start -->
