@@ -4447,7 +4447,8 @@ button:focus {
 }
 /* Accordion */
 .accordion_grounp {
-    overflow: hidden
+    overflow: hidden;
+    clear: both;
 }
 .accordion_grounp .accordionblock {
     width: 100%;
