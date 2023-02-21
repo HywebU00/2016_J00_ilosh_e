@@ -2120,7 +2120,9 @@ button:focus {
     border: none;
     height: 22px;
     width: 22px;
-    border: 1px solid #bbb
+    border: 1px solid #bbb;
+    font-size: 0;
+    line-height: 22px;
 }
 .page ul li.prev a {
     background-position: -2px 0px;
