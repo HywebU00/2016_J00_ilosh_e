@@ -253,10 +253,10 @@ $(function() {
         $('.marquee ul').slick({
             dots: false,
             infinite: true,
-            vertical: true,
+            vertical:false,
             verticalSwiping: true,
-            speed: 300,
-            autoplaySpeed: 5000,
+            speed: 10000,
+            autoplaySpeed: 3000,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,

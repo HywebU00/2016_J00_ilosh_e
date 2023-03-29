@@ -4820,64 +4820,71 @@ button:focus {
     font-size: 1.125em;
 }
 .marquee_block .marquee {
-    height: 40px;
+    height: 50px;
     display: block;
     overflow: hidden;
-    margin: 2em 1em 0;
+    background-color: #ffe599;
+    margin: 0;
     text-align: left;
-    padding: 0 3em 0 2em;
+    padding: 0;
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-bottom: 1px solid #dadada;
+    border-radius: 0 0 5px 5px;
+}
+.marquee_block .marquee:before {
+    content: '';
+    background-image: url('../images/marquee_icon.svg');
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 20px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+   /*  background-color: #d04437; */
+}
+.marquee_block .marquee ul {
+    margin: 0;
+    padding: 0 3em 0 6em;
+    list-style: none;
 }
 .marquee_block .marquee .slick-prev {
-    right: 0px !important;
-    top: 8px !important;
-    left: auto;
-    display: block;
+    transform: rotate(0deg);
+    right: auto !important;
+    top: 50%;
+    left: 60px;
+    opacity: .5;
     width: 20px !important;
     height: 20px !important;
-    opacity: .5;
-    /*  border-radius: 50%;
-    min-width: auto; */
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
     background: url('../assets/module/slick/icon_arrow_up_s.png') no-repeat center center;
     background-size: 16px;
 }
 .marquee_block .marquee .slick-next {
-    right: 0px !important;
-    top: 32px !important;
+    transform: rotate(180deg);
+    top: 50%;
     left: auto;
-    display: block;
+    right: 15px;
+    opacity: .5;
     width: 20px !important;
     height: 20px !important;
-    opacity: .5;
-    /*  border-radius: 50%;
-    min-width: auto; */
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
     background: url('../assets/module/slick/icon_arrow_up_s.png') no-repeat center center;
     background-size: 16px;
 }
-.marquee_block .marquee .slick-slider {
-    padding: 0;
-}
 .marquee_block .marquee ul li a {
     display: block;
-    line-height: 40px;
-    margin-right: 3em;
-    font-weight: bold;
+    line-height: 50px;
+    margin-right: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #000;
     text-decoration: none;
+}
+.marquee_block .marquee ul li a:hover {
+    color: #278186;
 }
