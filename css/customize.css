@@ -4820,10 +4820,10 @@ button:focus {
     font-size: 1.125em;
 }
 .marquee_block .marquee {
-    height: 50px;
+    height: 54px;
     display: block;
     overflow: hidden;
-    background-color: #ffe599;
+    background-color: #fff9bf;
     margin: 0;
     text-align: left;
     padding: 0;
@@ -4835,45 +4835,40 @@ button:focus {
     box-sizing: border-box;
     border-radius: 0 0 5px 5px;
 }
-.marquee_block .marquee:before {
-    content: '';
-    background-image: url('../images/marquee_icon.svg');
-    background-repeat: no-repeat;
-    background-position: 20px center;
-    background-size: 20px;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    top: 0;
-   /*  background-color: #d04437; */
-}
+
 .marquee_block .marquee ul {
     margin: 0;
-    padding: 0 3em 0 6em;
+    padding:0;
     list-style: none;
 }
 .marquee_block .marquee .slick-prev {
-    transform: rotate(0deg);
-    right: auto !important;
-    top: 50%;
-    left: 60px;
+    transform: rotate(90deg);
+    right: 20px !important;
+    top: 15px !important;
+    left: auto;
+    opacity: .5;
+    width: 20px !important;
+    height: 20px !important;
+    background: url('../assets/module/slick/icon_arrow_up_s.png') no-repeat center center;
+    background-size: 16px;
+     width: 20px !important;
+    height: 20px !important;
+    box-shadow: none;
+}
+.marquee_block .marquee .slick-next {
+    transform: rotate(-90deg);
+    right: 20px !important;
+    top: 38px !important;
+    left: auto;
     opacity: .5;
     width: 20px !important;
     height: 20px !important;
     background: url('../assets/module/slick/icon_arrow_up_s.png') no-repeat center center;
     background-size: 16px;
 }
-.marquee_block .marquee .slick-next {
-    transform: rotate(180deg);
-    top: 50%;
-    left: auto;
-    right: 15px;
-    opacity: .5;
-    width: 20px !important;
-    height: 20px !important;
-    background: url('../assets/module/slick/icon_arrow_up_s.png') no-repeat center center;
-    background-size: 16px;
+.marquee_block .marquee ul li {
+    padding: 0;
+    font-size: 1.125em;
 }
 .marquee_block .marquee ul li a {
     display: block;
@@ -4883,8 +4878,27 @@ button:focus {
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #000;
+     padding-right: 3em;
     text-decoration: none;
 }
 .marquee_block .marquee ul li a:hover {
-    color: #278186;
+    color: #20686C;
+}
+.marquee_block .marquee ul li a span {
+    background-color: #cf4b0c;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+    margin: 0 1em 0 .5em;
+}
+.marquee_block .marquee ul li a span:after {
+    content: '';
+    border: 7px solid #cf4b0c;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    right: -13px;
+    top: 9px;
 }
