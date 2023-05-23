@@ -4098,17 +4098,17 @@ button:focus {
         padding-left: 0
     }
 }
-.item_listblock .item_list .content h3 {
+.item_listblock .item_list .content .item_title {
     margin: 5px 0 10px;
     padding: 0;
     font-size: 1.25em;
     font-weight: bolder;
 }
-.item_listblock .item_list .content h3 a {
+.item_listblock .item_list .content .item_title a {
     text-decoration: underline;
     color: #278186;
 }
-.item_listblock .item_list .content h3 a:hover {
+.item_listblock .item_list .content .item_title a:hover {
     text-decoration: none;
     color: #B83B28;
 }
@@ -4137,12 +4137,12 @@ button:focus {
     margin-bottom: 8px;
     color: #666
 }
-.item_listblock .item_list2 h3 {
+.item_listblock .item_list2 .item_title {
     margin: 5px 0 10px;
     padding: 0;
     font-size: 1.25em
 }
-.item_listblock .item_list2 h3 a {
+.item_listblock .item_list2 .item_title a {
     text-decoration: underline;
     display: block;
     overflow: hidden;
@@ -4151,7 +4151,7 @@ button:focus {
     color: #278186;
     font-weight: bolder;
 }
-.item_listblock .item_list2 h3 a:hover {
+.item_listblock .item_list2 .item_title a:hover {
     text-decoration: none;
     color: #B83B28;
 }
