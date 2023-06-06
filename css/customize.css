@@ -4814,91 +4814,88 @@ button:focus {
     background-color: #fff;
     text-decoration: none
 }
-/* 跑馬燈 */
+/* 跑馬燈2 */
 .marquee_block {
-    background-color: #eeeeee;
-    font-size: 1.125em;
-}
-.marquee_block .marquee {
-    height: 54px;
-    display: block;
-    overflow: hidden;
-    background-color: #fff9bf;
-    margin: 0;
-    text-align: left;
-    padding: 0;
     position: relative;
-    min-height: 1px;
-    padding: 0;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    background-color: #fff9bf;
+}
+.marquee_block .container {
+    padding-left: 100px;
+    position: relative;
+    padding-right: 30px;
     box-sizing: border-box;
-    border-radius: 0 0 5px 5px;
 }
-
-.marquee_block .marquee ul {
-    margin: 0;
-    padding:0;
-    list-style: none;
+@media (max-width: 767px) {
+    .marquee_block .container {
+        padding-left: 120px;
+    }
 }
-.marquee_block .marquee .slick-prev {
-    transform: rotate(90deg);
-    right: 20px !important;
-    top: 15px !important;
-    left: auto;
-    opacity: .5;
-    width: 20px !important;
-    height: 20px !important;
-    background: url('../assets/module/slick/icon_arrow_up_s.png') no-repeat center center;
-    background-size: 16px;
-     width: 20px !important;
-    height: 20px !important;
-    box-shadow: none;
-}
-.marquee_block .marquee .slick-next {
-    transform: rotate(-90deg);
-    right: 20px !important;
-    top: 38px !important;
-    left: auto;
-    opacity: .5;
-    width: 20px !important;
-    height: 20px !important;
-    background: url('../assets/module/slick/icon_arrow_up_s.png') no-repeat center center;
-    background-size: 16px;
-}
-.marquee_block .marquee ul li {
-    padding: 0;
-    font-size: 1.125em;
-}
-.marquee_block .marquee ul li a {
-    display: block;
-    line-height: 50px;
-    margin-right: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #000;
-     padding-right: 3em;
-    text-decoration: none;
-}
-.marquee_block .marquee ul li a:hover {
-    color: #20686C;
-}
-.marquee_block .marquee ul li a span {
-    background-color: #cf4b0c;
+.marquee_block .container .announcement {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    background-color: #c94c00;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
-    color: #fff;
-    position: relative;
-    margin: 0 1em 0 .5em;
+    font-size: 0.938em;
+    display: inline-block;
 }
-.marquee_block .marquee ul li a span:after {
+@media (max-width: 767px) {
+    .marquee_block .container .announcement {
+        left: 15px;
+    }
+}
+.marquee_block .container .announcement:after {
     content: '';
-    border: 7px solid #cf4b0c;
+    border: 7px solid #c94c00;
     border-top-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
     position: absolute;
     right: -13px;
-    top: 9px;
+    top: 11px;
+}
+.marquee_block .container .marquee {
+    overflow: hidden;
+    padding: 20px 0;
+}
+.marquee_block .container .marquee .marqueeOuter {
+    display: flex;
+}
+.marquee_block .container .marquee .marqueeBox {
+    padding: 0 0 1px;
+    display: flex;
+}
+.marqueeItem {
+    margin: 0 80px 0 0;
+    white-space: nowrap;
+    font-size: 1.125em;
+}
+.marqueeItem a {
+    color: #1579a9;
+    font-weight: bolder;
+}
+.marqueeItem a:hover {
+    color: #eb0202;
+}
+.marqueeItem a span {
+    background-color: #c94c00;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 1em;
+    border-radius: 5px;
+    font-size: 0.938em;
+    display: inline-block;
+    position: relative;
+}
+.marqueeItem a span::after {
+    content: '';
+    border: 7px solid $color-orange;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    right: -13px;
+    top: 11px;
 }
