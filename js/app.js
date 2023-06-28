@@ -17,13 +17,13 @@ $(document).ready(function() {
     // $(menu).last('li').children('a').focusout(
     // //$('#Header .menu li:last>a').focusout(
     // function(){
-    // 	$(menu).find('li ul').hide();
-    // 	//$('#Header .menu li>ul').hide();
+    //  $(menu).find('li ul').hide();
+    //  //$('#Header .menu li>ul').hide();
     // });
     //
     //inmenu
     // $('.inmenu h1').click(function(){
-    //	   $('.inmenu ul').slideToggle(500);
+    //     $('.inmenu ul').slideToggle(500);
     //       $
     //   
     //   })
@@ -51,7 +51,7 @@ $(function() {
     $('a.goCenter').keydown(function(e) {
         if (e.which == 13) {
             $('#aC').focus(); /*#aC 是中間定位點的id*/
-             $('html, body').stop(true, true).animate({ scrollTop: $('.MainContent').find('.accesskey').offset().top }, 800, 'easeOutExpo');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.MainContent').find('.accesskey').offset().top }, 800, 'easeOutExpo');
         }
     });
     /*-----------------------------------*/
@@ -110,22 +110,18 @@ $(document).on('keydown', function(e) {
         $('html, body').stop(true, true).animate({ scrollTop: $('.MainContent').find('.accesskey').offset().top }, 800, 'easeOutExpo');
         $('.MainContent').find('.accesskey').focus();
     }
-
     // alt+Z footer
     if (e.altKey && e.keyCode == 90) {
         $('html, body').stop(true, true).animate({ scrollTop: $('#Footer').find('.accesskey').offset().top }, 800, 'easeOutExpo');
         $('#Footer').find('.accesskey').focus();
     }
 });
-
-
-$(function(){
+$(function() {
     // 條件查詢
     $('.condition_searchbtn').click(function() {
         $('.condition_block2').stop().slideToggle();
     })
 })
-
 $(function() {
     /*-----------------------------------*/
     ////////////////多組Tab////////////////
@@ -157,7 +153,7 @@ $(function() {
                 tabwidth = _tab.width(),
                 tabItemHeight = _tabItem.outerHeight(),
                 tabContentHeight = _tab.find('.active').next().innerHeight(),
-                tiGap =8,
+                tiGap = 8,
                 tabItemLength = _tabItem.length, //有幾個頁籤
                 tabItemRows = parseInt(tabItemLength / 3); //頁籤有幾行
             if (tabItemLength % 3 != 0) {
@@ -240,7 +236,6 @@ $(function() {
             // _accordionItem3.keyup(accordion3);
         }
     });
-
     // 點外面關閉
     $(document).on('touchend click', function(e) {
         var container = $(" .ask_questions .btn, .ask_questions .questions_block");
@@ -268,70 +263,141 @@ $(function() {
 // 跑馬燈
 $(function() {
     function marquee(state) {
-        let marquee = document.querySelector(".marquee");
-        let marqueeOuter = marquee.querySelector(".marqueeOuter");
-        let marqueeBox = marquee.querySelector(".marqueeBox");
-        let marqueeItem = marquee.querySelector(".marqueeItem");
+        const marquee = document.querySelector('.marquee');
+        const marqueeOuter = marquee.querySelector('.marqueeOuter');
+        const marqueeBox = marquee.querySelector('.marqueeBox');
+        const marqueeItem = marquee.querySelectorAll('.marqueeItem a');
+        const body = document.querySelector('body');
+        const firstItem = marqueeItem[0];
+        const lastItem = marqueeItem[marqueeItem.length - 1];
         let marqueeSpeed = state.speed;
         let clone = marqueeBox.cloneNode(true);
+        let check = false;
+        let mouse = false;
         const marqueeContent = () => {
-            let marqueeOuterWidth = marqueeOuter.offsetWidth;
-            let marqueeBoxWidth = marqueeBox.offsetWidth;
-            let outerWidth = marquee.offsetWidth;
-            if (marqueeOuterWidth >= outerWidth) {
+            const marqueeOuterWidth = marqueeOuter.offsetWidth;
+            const marqueeBoxWidth = marqueeBox.clientWidth;
+            const outerWidth = marquee.offsetWidth;
+            const bodyWidth = body.offsetWidth;
+            if (marqueeBoxWidth > outerWidth) {
                 marqueeOuter.appendChild(clone);
-                let cloneFocus = clone.querySelectorAll("a,input,button,select");
-                let marqueeBoxAll = marquee.querySelectorAll(".marqueeBox");
+                const cloneFocus = clone.querySelectorAll('a,input,button,select');
+                const marqueeBoxAll = marquee.querySelectorAll('.marqueeBox');
                 let sliderMovePx = 0;
                 let request;
-                let marqueeState;
-                let animationStartTime = 0;
-                let pause = 0;
                 cloneFocus.forEach((item, index) => {
-                    item.setAttribute("tabindex", "-1");
+                    item.setAttribute('tabindex', '-1');
                 });
-                cancelAnimationFrame(request);
                 const animation = () => {
                     sliderMovePx++;
                     if (sliderMovePx / marqueeSpeed < marqueeBoxWidth) {
                         marqueeBoxAll.forEach((item, index) => {
-                            item.style = `transform:translateX(-${
-              sliderMovePx / marqueeSpeed
-            }px)`;
+                            item.style = `transform:translateX(-${sliderMovePx / marqueeSpeed}px)`;
                         });
                     } else {
                         sliderMovePx = 0;
                     }
                     request = requestAnimationFrame(animation);
-                };          
-                const marqueeStop = () => {
-                    if (marqueeState === "stop") {
-                        return;
-                    }
-                    if (request) {
+                };
+                marquee.addEventListener('mouseenter', function() {
+                    if (!mouse) {
                         cancelAnimationFrame(request);
-                        // Stop point timestamp
-                        pause = window.performance.now();
-                        marqueeState = "stop";
+                        mouse = true;
                     }
-                };
-                const marqueeContinue = () => {
-                    animationStartTime += window.performance.now() - pause;
-                    request = requestAnimationFrame(animation);
-                    marqueeState = "continue";
-                };
-                animation();
-                marquee.addEventListener("mouseenter", marqueeStop);
-                marquee.addEventListener("mouseleave", () => {
-                    cancelAnimationFrame(request);
-                    marqueeContinue();
                 });
+                marquee.addEventListener('mouseleave', function() {
+                    if (mouse) {
+                        clone.style.display = 'block';
+                        lastItem.parentElement.parentElement.parentElement.style.display = 'flex';
+                        marqueeItem.forEach((v) => {
+                            v.parentElement.removeAttribute('style');
+                        });
+                        cancelAnimationFrame(request);
+                        requestAnimationFrame(animation);
+                        mouse = false;
+                    }
+                });
+                cancelAnimationFrame(request);
+                requestAnimationFrame(animation);
+                check = true;
+                ////////////////////////
+                firstItem.addEventListener('focus', function() {
+                    firstItem.parentElement.parentElement.style = 'display:block;width:100%;transform:translateX(0px);';
+                    clone.style = 'display:none;';
+                    const siblings = [...firstItem.parentElement.parentElement.children].filter((child) => {
+                        return child !== firstItem.parentElement;
+                    });
+                    siblings.forEach((v) => {
+                        v.style.display = 'none';
+                    });
+                    cancelAnimationFrame(request);
+                    check = true;
+                });
+                lastItem.addEventListener('focus', function() {
+                    lastItem.parentElement.parentElement.style = 'display:block;width:100%;transform:translateX(0px);';
+                    clone.style = 'display:none;';
+                    const siblings = [...lastItem.parentElement.parentElement.children].filter((child) => {
+                        return child !== lastItem.parentElement;
+                    });
+                    siblings.forEach((v) => {
+                        v.style.display = 'none';
+                    });
+                    cancelAnimationFrame(request);
+                    check = true;
+                });
+                marqueeItem.forEach((item, index) => {
+                    item.addEventListener('keydown', function(e) {
+                        mouse = false;
+                        if (e.which === 9 && !e.shiftKey && item !== lastItem) {
+                            // e.preventDefault();
+                            //tab
+                            marqueeItem.forEach((item) => {
+                                item.parentElement.style.display = 'none';
+                            });
+                            marqueeItem[index + 1].parentElement.style.display = 'block';
+                            marqueeItem[index].focus();
+                            if (item !== lastItem) {} else {}
+                            cancelAnimationFrame(request);
+                        } else if (e.which === 9 && !e.shiftKey && item === lastItem) {
+                            clone.style.display = 'block';
+                            lastItem.parentElement.parentElement.parentElement.style.display = 'flex';
+                            marqueeItem.forEach((v) => {
+                                v.parentElement.removeAttribute('style');
+                            });
+                            check = false;
+                            cancelAnimationFrame(request);
+                            requestAnimationFrame(animation);
+                        } else if (e.which === 9 && e.shiftKey && item !== firstItem) {
+                            item.parentElement.parentElement.style = 'display:block;width:100%;transform:translateX(0px);';
+                            marqueeItem.forEach((item) => {
+                                item.parentElement.style.display = 'none';
+                            });
+                            clone.style = 'display:none;';
+                            marqueeItem[index - 1].parentElement.style.display = 'block';
+                            marqueeItem[index].focus();
+                            cancelAnimationFrame(request);
+                        } else if (e.which === 9 && e.shiftKey && item === firstItem) {
+                            clone.style.display = 'block';
+                            firstItem.parentElement.parentElement.parentElement.style.display = 'flex';
+                            marqueeItem.forEach((v) => {
+                                v.parentElement.removeAttribute('style');
+                            });
+                            check = false;
+                            cancelAnimationFrame(request);
+                            requestAnimationFrame(animation);
+                        }
+                    });
+                });
+                window.addEventListener('keydown', function(e) {
+                    if (e.which === 9 && !e.shiftKey) {} else if (e.which === 9 && e.shiftKey) {}
+                });
+                ////////////////////////
             }
         };
-        window.addEventListener("load", marqueeContent);
-        window.addEventListener("resize", marqueeContent);
+        window.addEventListener('load', marqueeContent);
+        window.addEventListener('resize', marqueeContent);
     }
     marquee({
-        speed: 1 //越低越快
+        speed: 1, //越低越快
     });
 })
