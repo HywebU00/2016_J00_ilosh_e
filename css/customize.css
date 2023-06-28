@@ -4873,11 +4873,16 @@ button:focus {
     font-size: 1.125em;
 }
 .marqueeItem a {
-    color: #1579a9;
+    color: #333;
+    padding:5px;
     font-weight: bolder;
 }
-.marqueeItem a:hover {
-    color: #eb0202;
+.marqueeItem a:hover, .marqueeItem a:focus {
+    color: #E40505;
+    text-decoration: none;
+}
+.marqueeItem a:focus{
+    box-shadow: 0 0px 0px 3px #c94c00 inset;
 }
 .marqueeItem a span {
     background-color: #c94c00;
