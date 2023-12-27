@@ -36,16 +36,30 @@
     <link rel="alternate stylesheet" type="text/css" href="css/fontL.css" title="large" data-cat="font" />
     <styleSwitcher cat="font" />
     <script type="text/javascript" src="js/styleswitcher.js"></script><!-- 切換大、中、小字形-->
-    <style> @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
-/*
+    <style>
+        @media only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px) {
+
+            /*
     Label the data
     */
-.listTb td:nth-of-type(1):before { content: "Title:"; }
-.listTb td:nth-of-type(2):before { content: "Category:"; }
-.listTb td:nth-of-type(3):before { content: "Department:"; }
-.listTb td:nth-of-type(4):before { content: "Date:"; }
-}
-</style>
+            .listTb td:nth-of-type(1):before {
+                content: "Title:";
+            }
+
+            .listTb td:nth-of-type(2):before {
+                content: "Category:";
+            }
+
+            .listTb td:nth-of-type(3):before {
+                content: "Department:";
+            }
+
+            .listTb td:nth-of-type(4):before {
+                content: "Date:";
+            }
+        }
+    </style>
 </head>
 
 <body><a class="goCenter" href="#center" tabindex="1">Press Enter to Main Content</a>
@@ -53,9 +67,11 @@
         <nav class="navbar navbar-default megamenu" role="navigation">
             <div class="container Topheader">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#offcanvas-left"> <span class="sr-only">Toggle navigation</span><i class="icon-menu"></i> </button>
+                    <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#offcanvas-left"> <span class="sr-only">Toggle navigation</span><i class="icon-menu"></i>
+                    </button>
                     <h1 class="Logo"><a href="index.html"><img src="images/logo.png" alt="勞動部勞動及職業安全衛生研究所"></a></h1>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#offcanvas-right"> <span class="sr-only">Toggle navigation</span><i class="icon-search"></i> </button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#offcanvas-right"> <span class="sr-only">Toggle navigation</span><i class="icon-search"></i>
+                    </button>
                 </div>
                 <div class="collapse navbar-collapse" id="offcanvas-right" role="navigation">
                     <div class="pull-sm-right pull-md-right pull-lg-right">
@@ -74,9 +90,12 @@
                             <div class="fontSet"><span>Size：</span>
                                 <div id="fontSwitcherLayer">
                                     <ul>
-                                        <li class="fontS"><a id="small" data-cat="font" href="css/fontS.css" class="sw-here" onclick="setActiveStyleSheet('small', 'font'); return false;" onkeypress="setActiveStyleSheet('small', 'font'); return false;">S</a></li>
-                                        <li class="fontM"><a id="medium" data-cat="font" href="css/fontM.css" onclick="setActiveStyleSheet('medium', 'font'); return false;" onkeypress="setActiveStyleSheet('medium', 'font'); return false;">M</a></li>
-                                        <li class="fontL"><a id="large" data-cat="font" href="css/fontL.css" onclick="setActiveStyleSheet('large', 'font'); return false;" onkeypress="setActiveStyleSheet('large', 'font'); return false;">L</a></li>
+                                        <li class="fontS"><a id="small" data-cat="font" href="css/fontS.css" class="sw-here" onclick="setActiveStyleSheet('small', 'font'); return false;"
+                                                onkeypress="setActiveStyleSheet('small', 'font'); return false;">S</a></li>
+                                        <li class="fontM"><a id="medium" data-cat="font" href="css/fontM.css" onclick="setActiveStyleSheet('medium', 'font'); return false;"
+                                                onkeypress="setActiveStyleSheet('medium', 'font'); return false;">M</a></li>
+                                        <li class="fontL"><a id="large" data-cat="font" href="css/fontL.css" onclick="setActiveStyleSheet('large', 'font'); return false;"
+                                                onkeypress="setActiveStyleSheet('large', 'font'); return false;">L</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -103,7 +122,8 @@
                                     <input type="text" class="form-control" placeholder="Please Key In Keywords" accesskey="S">
                                     <span class="input-group-btn">
                                         <input type="button" name="" alt="查詢" class="btn">
-                                    </span> </div>
+                                    </span>
+                                </div>
                                 <div class="AdvSearch"><a href="javascript:;">Advanced Search</a></div>
                             </form>
                         </div>
@@ -146,7 +166,7 @@
     </header>
     <!--MainContent start -->
     <section class="MainContent">
-       
+
         <!--內頁 start -->
         <div class="Block_incontent">
             <div class="container">
@@ -168,7 +188,7 @@
                         <!--左欄資訊 end -->
                     </div>
                     <div class=" col-md-9">
-                       <a class="accesskey" href="#aC" id="aC" accesskey="C" title="Main content">:::</a>
+                        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="Main content">:::</a>
                         <!--右欄資訊 start -->
                         <ol class="breadcrumb">
                             <li><a href="#">Homepage</a></li>
@@ -197,8 +217,10 @@
                                 </ul>
                             </nav>
                             <!--分類 end -->
+                            <div class="condition"><a href="#">Conditions inquiry</a></div>
                             <!--page start -->
-                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize" onChange="OnPageSizeChange(this)">
+                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize"
+                                        onChange="OnPageSizeChange(this)">
                                         <option value="10" selected>10</option>
                                         <option value="15">15</option>
                                         <option value="30">30</option>
@@ -220,7 +242,7 @@
                                 </ul>
                             </section>
                             <!--page  end -->
-                            <div class="condition"><a href="#">Conditions inquiry</a></div>
+
                             <!--listbutton start -->
                             <div class="listbutton">
                                 <ul>
@@ -249,7 +271,9 @@
                                             <td class="aCenter">104-03-16</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">The Ministry of Labor (MOL) amended the Enforcement Rules of Labor Union Act on October 8th, 2014.The MOL believes that this amendment enables the Labor Union Act to be more effectively enforced and protects workers’ right to organize, further contributing to the normal functioning of labor unions, and allowing workers to truly enjoy the three basic labor rights.</a></td>
+                                            <td><a href="#">The Ministry of Labor (MOL) amended the Enforcement Rules of Labor Union Act on October 8th, 2014.The MOL believes that this amendment
+                                                    enables the Labor Union Act to be more effectively enforced and protects workers’ right to organize, further contributing to the normal functioning
+                                                    of labor unions, and allowing workers to truly enjoy the three basic labor rights.</a></td>
                                             <td class="aCenter">News</td>
                                             <td>Department of Labor Relations</td>
                                             <td class="aCenter">104-03-04</td>
@@ -261,13 +285,15 @@
                                             <td class="aCenter">104-02-25</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">The period for “paternity leave” extended to the 15 days before and after childbirth, bringing more balance to work and life for employees.</a></td>
+                                            <td><a href="#">The period for “paternity leave” extended to the 15 days before and after childbirth, bringing more balance to work and life for
+                                                    employees.</a></td>
                                             <td class="aCenter">News</td>
                                             <td>Department of Labor Welfare</td>
                                             <td class="aCenter">104-03-16</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">Better wage guarantee during maternity leave as the Ministry of Labor stipulates payment standard shall not be lower than average wage.</a></td>
+                                            <td><a href="#">Better wage guarantee during maternity leave as the Ministry of Labor stipulates payment standard shall not be lower than average wage.</a>
+                                            </td>
                                             <td class="aCenter">News</td>
                                             <td>Department of Labor Relations</td>
                                             <td class="aCenter">104-03-04</td>
@@ -279,7 +305,8 @@
                                             <td class="aCenter">104-02-25</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">The “Labor Standards Act” to become applicable to contract employees (not including teachers only engaged in teaching activities) of private schools on August 1st</a></td>
+                                            <td><a href="#">The “Labor Standards Act” to become applicable to contract employees (not including teachers only engaged in teaching activities) of private
+                                                    schools on August 1st</a></td>
                                             <td class="aCenter">News</td>
                                             <td>Department of Labor Welfare</td>
                                             <td class="aCenter">104-03-16</td>
@@ -291,7 +318,9 @@
                                             <td class="aCenter">104-03-04</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">To promote self learning and lifelong learning and to promote learning on the Labor e-Learning website, this ministry plans to conduct a marketing campaign, Labor e-Learning Website Divination for the Years of the Horse and the Goat, from October 1 to October 20, 2014. For more information, please refer to Labor e-Learning website at http://labor-elearning.mol.gov.tw/.</a></td>
+                                            <td><a href="#">To promote self learning and lifelong learning and to promote learning on the Labor e-Learning website, this ministry plans to conduct a
+                                                    marketing campaign, Labor e-Learning Website Divination for the Years of the Horse and the Goat, from October 1 to October 20, 2014. For more
+                                                    information, please refer to Labor e-Learning website at http://labor-elearning.mol.gov.tw/.</a></td>
                                             <td class="aCenter">News</td>
                                             <td>Department of Labor Insurance</td>
                                             <td class="aCenter">104-02-25</td>
@@ -307,7 +336,8 @@
                             </section>
                             <!--listTb  end -->
                             <!--page start -->
-                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize" onChange="OnPageSizeChange(this)">
+                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize"
+                                        onChange="OnPageSizeChange(this)">
                                         <option value="10" selected>10</option>
                                         <option value="15">15</option>
                                         <option value="30">30</option>
@@ -329,7 +359,7 @@
                                 </ul>
                             </section>
                             <!--page  end -->
-                            
+
                             <div class="quickLink">
                                 <ul>
                                     <li><a href="javascript:history.back();" class="back">Back</a>
@@ -352,7 +382,7 @@
                     <div class="col-md-12 ">
                         <!--FatFooter -->
                         <div id="FatFooter">
-                             <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+                            <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
                             <nav>
                                 <ul>
                                     <li><a href="javascript:;">About ILOSH</a>
@@ -382,7 +412,7 @@
             </div>
         </div>
         <!--第七組 fatfoot end-->
-        
+
     </section>
     <!--MainContent end -->
     <!--Footer start -->
@@ -422,7 +452,9 @@
                         <!--右 start -->
                         <div class="footer_blockright">
                             <div class="explanation">
-                                <p>Copyright © 2013 Institute of Labor, Occupational Safety And Health, Ministry of Labor. All Rights reserved.<br> Phone: 886-2-26607600 Fax: 886-2-26607731 E-mail:aiosh@mail.ilosh.gov.tw<br> Address: No. 99, Lane 407, Hengke Rd., Sijhih District, New Taipei City 22143, Taiwan (R.O.C.)<br> Best viewed in resolution of 1024*768. IE 8.0 is suggested.</p>
+                                <p>Copyright © 2013 Institute of Labor, Occupational Safety And Health, Ministry of Labor. All Rights reserved.<br> Phone: 886-2-26607600 Fax: 886-2-26607731
+                                    E-mail:aiosh@mail.ilosh.gov.tw<br> Address: No. 99, Lane 407, Hengke Rd., Sijhih District, New Taipei City 22143, Taiwan (R.O.C.)<br> Best viewed in resolution of
+                                    1024*768. IE 8.0 is suggested.</p>
                             </div>
                             <div class="Mark">
                                 <ul>
