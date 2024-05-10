@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>勞動部勞動及職業安全衛生研究所</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/module/bootstrap-3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/module/bootstrap-3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/module/bootstrap-3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/module/bootstrap-3.4.1/css/bootstrap-theme.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,16 +36,30 @@
     <link rel="alternate stylesheet" type="text/css" href="css/fontL.css" title="large" data-cat="font" />
     <styleSwitcher cat="font" />
     <script type="text/javascript" src="js/styleswitcher.js"></script><!-- 切換大、中、小字形-->
-    <style> @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
-/*
+    <style>
+        @media only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px) {
+
+            /*
     Label the data
     */
-.listTb td:nth-of-type(1):before { content: "Title:"; }
-.listTb td:nth-of-type(2):before { content: "Category:"; }
-.listTb td:nth-of-type(3):before { content: "Department:"; }
-.listTb td:nth-of-type(4):before { content: "Date:"; }
-}
-</style>
+            .listTb td:nth-of-type(1):before {
+                content: "Title:";
+            }
+
+            .listTb td:nth-of-type(2):before {
+                content: "Category:";
+            }
+
+            .listTb td:nth-of-type(3):before {
+                content: "Department:";
+            }
+
+            .listTb td:nth-of-type(4):before {
+                content: "Date:";
+            }
+        }
+    </style>
 </head>
 
 <body><a class="goCenter" href="#center" tabindex="1">Press Enter to Main Content</a>
@@ -53,9 +67,11 @@
         <nav class="navbar navbar-default megamenu" role="navigation">
             <div class="container Topheader">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#offcanvas-left"> <span class="sr-only">Toggle navigation</span><i class="icon-menu"></i> </button>
+                    <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#offcanvas-left"> <span class="sr-only">Toggle navigation</span><i class="icon-menu"></i>
+                    </button>
                     <h1 class="Logo"><a href="index.html"><img src="images/logo.png" alt="勞動部勞動及職業安全衛生研究所"></a></h1>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#offcanvas-right"> <span class="sr-only">Toggle navigation</span><i class="icon-search"></i> </button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#offcanvas-right"> <span class="sr-only">Toggle navigation</span><i class="icon-search"></i>
+                    </button>
                 </div>
                 <div class="collapse navbar-collapse" id="offcanvas-right" role="navigation">
                     <div class="pull-sm-right pull-md-right pull-lg-right">
@@ -74,9 +90,12 @@
                             <div class="fontSet"><span>Size：</span>
                                 <div id="fontSwitcherLayer">
                                     <ul>
-                                        <li class="fontS"><a id="small" data-cat="font" href="css/fontS.css" class="sw-here" onclick="setActiveStyleSheet('small', 'font'); return false;" onkeypress="setActiveStyleSheet('small', 'font'); return false;">S</a></li>
-                                        <li class="fontM"><a id="medium" data-cat="font" href="css/fontM.css" onclick="setActiveStyleSheet('medium', 'font'); return false;" onkeypress="setActiveStyleSheet('medium', 'font'); return false;">M</a></li>
-                                        <li class="fontL"><a id="large" data-cat="font" href="css/fontL.css" onclick="setActiveStyleSheet('large', 'font'); return false;" onkeypress="setActiveStyleSheet('large', 'font'); return false;">L</a></li>
+                                        <li class="fontS"><a id="small" data-cat="font" href="css/fontS.css" class="sw-here" onclick="setActiveStyleSheet('small', 'font'); return false;"
+                                                onkeypress="setActiveStyleSheet('small', 'font'); return false;">S</a></li>
+                                        <li class="fontM"><a id="medium" data-cat="font" href="css/fontM.css" onclick="setActiveStyleSheet('medium', 'font'); return false;"
+                                                onkeypress="setActiveStyleSheet('medium', 'font'); return false;">M</a></li>
+                                        <li class="fontL"><a id="large" data-cat="font" href="css/fontL.css" onclick="setActiveStyleSheet('large', 'font'); return false;"
+                                                onkeypress="setActiveStyleSheet('large', 'font'); return false;">L</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -102,8 +121,9 @@
                                     <label for="">帳號:</label>
                                     <input type="text" class="form-control" placeholder="Please Key In Keywords" accesskey="S">
                                     <span class="input-group-btn">
-                                        <input type="button" name="" alt="查詢" class="btn">
-                                    </span> </div>
+                                        <button type="button" class="btn btn-default"> <span class="glyphicon glyphicon-search"> </span></button>
+                                    </span>
+                                </div>
                                 <div class="AdvSearch"><a href="javascript:;">Advanced Search</a></div>
                             </form>
                         </div>
@@ -260,14 +280,17 @@
                                         <tr>
                                             <th scope="row"><label for="htx_xpostDateS">發布日期</label></th>
                                             <td><input type="text" id="htx_xpostDateS" name="htx_xpostDateS" size="10" readonly title="發布日期" tabindex="" class="text2" />
-                                                <button id="btnShowhtx_xpostDateS" onclick="javascript:document.getElementById('htx_xpostDateS').value='';" onkeypress="javascript:document.getElementById('htx_xpostDateS').value='';">清除</button>
+                                                <button id="btnShowhtx_xpostDateS" onclick="javascript:document.getElementById('htx_xpostDateS').value='';"
+                                                    onkeypress="javascript:document.getElementById('htx_xpostDateS').value='';">清除</button>
                                                 <script type="text/javascript">
-                                                Calendar.setup({ inputField: "htx_xpostDateS", ifFormat: "%Y/%m/%d" });
+                                                    Calendar.setup({inputField: "htx_xpostDateS", ifFormat: "%Y/%m/%d"});
                                                 </script>
-                                                <noscript> 自動清除預設值，如不執行不影響您資料瀏覽 </noscript> ～ <input id="htx_xpostDateE" name="htx_xpostDateE" size="10" readonly type="text" title="張貼日迄" tabindex="1" class="text2" />
-                                                <button id="btnShowhtx_xpostDateS" onclick="javascript:document.getElementById('htx_xpostDateE').value='';" onKeyPress="javascript:document.getElementById('htx_xpostDateE').value='';">清除</button>
+                                                <noscript> 自動清除預設值，如不執行不影響您資料瀏覽 </noscript> ～ <input id="htx_xpostDateE" name="htx_xpostDateE" size="10" readonly type="text" title="張貼日迄" tabindex="1"
+                                                    class="text2" />
+                                                <button id="btnShowhtx_xpostDateS" onclick="javascript:document.getElementById('htx_xpostDateE').value='';"
+                                                    onKeyPress="javascript:document.getElementById('htx_xpostDateE').value='';">清除</button>
                                                 <script type="text/javascript">
-                                                Calendar.setup({ inputField: "htx_xpostDateE", ifFormat: "%Y/%m/%d" });
+                                                    Calendar.setup({inputField: "htx_xpostDateE", ifFormat: "%Y/%m/%d"});
                                                 </script>
                                                 <noscript> 自動清除預設值，如不執行不影響您資料瀏覽 </noscript>
                                             </td>
@@ -309,7 +332,8 @@
                             </div>
                             <!-- 條件區塊 end-->
                             <!--page start -->
-                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize" onChange="OnPageSizeChange(this)">
+                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize"
+                                        onChange="OnPageSizeChange(this)">
                                         <option value="10" selected>10</option>
                                         <option value="15">15</option>
                                         <option value="30">30</option>
@@ -412,7 +436,8 @@
                             </div>
                             <!-- item_listblock end-->
                             <!--page start -->
-                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize" onChange="OnPageSizeChange(this)">
+                            <section class="page"><span class="hidden-xs"> Total<em>308</em>records，pageof total<em>1/18</em>page. Show <select name="PageSize" id="PageSize"
+                                        onChange="OnPageSizeChange(this)">
                                         <option value="10" selected>10</option>
                                         <option value="15">15</option>
                                         <option value="30">30</option>
@@ -525,7 +550,9 @@
                         <!--右 start -->
                         <div class="footer_blockright">
                             <div class="explanation">
-                                <p>Copyright © 2013 Institute of Labor, Occupational Safety And Health, Ministry of Labor. All Rights reserved.<br> Phone: 886-2-26607600 Fax: 886-2-26607731 E-mail:aiosh@mail.ilosh.gov.tw<br> Address: No. 99, Lane 407, Hengke Rd., Sijhih District, New Taipei City 22143, Taiwan (R.O.C.)<br> Best viewed in resolution of 1024*768. IE 8.0 is suggested.</p>
+                                <p>Copyright © 2013 Institute of Labor, Occupational Safety And Health, Ministry of Labor. All Rights reserved.<br> Phone: 886-2-26607600 Fax: 886-2-26607731
+                                    E-mail:aiosh@mail.ilosh.gov.tw<br> Address: No. 99, Lane 407, Hengke Rd., Sijhih District, New Taipei City 22143, Taiwan (R.O.C.)<br> Best viewed in resolution of
+                                    1024*768. IE 8.0 is suggested.</p>
                             </div>
                             <div class="Mark">
                                 <ul>
@@ -546,7 +573,7 @@
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JavaScript -->
-    <script src="assets/module/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+    <script src="assets/module/bootstrap-3.4.1/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.lazyload.min.js"></script>
     <!-- slick  -->
     <script src="assets/module/slick/slick.js"></script>
