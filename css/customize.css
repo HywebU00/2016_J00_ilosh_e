@@ -819,6 +819,11 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #167b9a;
+  font-size: 0;
+}
+.Search .btn:focus {
+  box-shadow: 0 0 0 2px #ffc000 inset;
+  outline: none;
 }
 .Search .AdvSearch {
   float: left;
